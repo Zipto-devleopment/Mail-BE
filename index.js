@@ -72,7 +72,7 @@ const getEmailTemplate = (email) => {
   </head>
   <body>
     <div class="container">
-      <div class="header">Welcome to Our Community!</div>
+      <div class="header">Welcome to Our Community! Congratulations </div>
       <div class="content">
         <p>Dear,</p>
         <p class="p-font">Hope this email finds you in good health and cheerful spirit! On behalf of the Zipto family, I am thrilled to extend our warmest congratulations as we offer you the exciting opportunity to join our esteemed team.</p>
@@ -142,7 +142,7 @@ app.post('/api/send-email', async (req, res) => {
     const mailOptions = {
       from: process.env.EMAIL_USER,
       to: email,
-      subject: 'Welcome to Our Community! Congratulations 🎉',
+      subject: 'Welcome to Our Community!',
       html: getEmailTemplate(email),
     };
 
